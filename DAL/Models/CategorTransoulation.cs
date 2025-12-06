@@ -11,7 +11,7 @@ namespace DAL.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int CategoryId { get; set; }
-        public Caregory Caregory { get; set; }
+        public Category Caregory { get; set; }
 
         public string Language { get; set; }
     }

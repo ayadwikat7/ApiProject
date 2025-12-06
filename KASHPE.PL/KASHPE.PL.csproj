@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
@@ -17,10 +18,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Area\Admin\" />
+    <Folder Include="Area\Users\" />
   </ItemGroup>
 
 </Project>

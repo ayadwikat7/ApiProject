@@ -171,3 +171,14 @@ C:\Users\hp\source\repos\KASHOP\KASHPE.PL\obj\Debug\net9.0\ar\KASHPE.PL.resource
 C:\Users\hp\source\repos\KASHOP\KASHPE.PL\obj\Debug\net9.0\KASHPE.PL.Resoureses.SharedResources.resources
 C:\Users\hp\source\repos\KASHOP\KASHPE.PL\obj\Debug\net9.0\KASHPE.PL.Resoureses.SharedResources.ar.resources
 C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Mapster.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Mapster.Core.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\hp\source\repos\KASHOP\KASHPE.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

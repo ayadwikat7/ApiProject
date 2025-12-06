@@ -9,8 +9,8 @@ namespace DAL.Models
     public class baseModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public statuse status { get; set; }
+
+        public statuse status { get; set; } = statuse.Active;
         public DateTime createCateg { get; set; }
     }
 }

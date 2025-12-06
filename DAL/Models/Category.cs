@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Caregory : baseModel
+    public class Category : baseModel
     {
 
  

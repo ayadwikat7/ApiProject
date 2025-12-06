@@ -1,15 +1,24 @@
 
+using BLL.Services;
 using DAL.Data;
+using DAL.Models;
+using DAL.Repository;
+using DAL.Utils;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System.Globalization;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace KASHPE.PL
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -43,7 +52,38 @@ namespace KASHPE.PL
                 });
 
             });
+            builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
 
+            builder.Services.AddScoped<ICategorySevices, CategoryService>();
+            builder.Services.AddScoped<IAuthanication, Authanication>();
+            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddIdentity<ApplicationUsers, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDpContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddScoped<ISeedData, RoleSeedData>();
+            builder.Services.AddScoped<ISeedData, UserSeedDate>();
+
+            builder.Services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+                    };
+                });
 
 
             var app = builder.Build();
@@ -57,14 +97,25 @@ namespace KASHPE.PL
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
+            using (var scope =app.Services.CreateScope()) { 
+                var services = scope.ServiceProvider;
+                var seedDatas = services.GetServices<ISeedData>();
+                foreach (var seedData in seedDatas)
+                {
+                  await  seedData.DataSeed();
+                }
+            }
 
-            app.MapControllers();
+                app.MapControllers();
 
             app.Run();
         }

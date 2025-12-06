@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "Login",
+    "RelativePath": "api/auth/Accounts/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "DAL.DTOs.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "Register",
+    "RelativePath": "api/auth/Accounts/Registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "DAL.DTOs.Request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KASHPE.PL.Controllers.CategoriesController",
     "Method": "index",
     "RelativePath": "api/Categories",
@@ -7,6 +39,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Controllers.CategoriesController",
+    "Method": "Create",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DAL.DTOs.Request.requestCategory",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
