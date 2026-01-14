@@ -6,10 +6,12 @@ using DAL.Repository;
 using DAL.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,8 +59,23 @@ namespace KASHPE.PL
             builder.Services.AddScoped<ICategorySevices, CategoryService>();
             builder.Services.AddScoped<IAuthanication, Authanication>();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+            builder.Services.AddIdentity<ApplicationUsers, IdentityRole>(
 
-            builder.Services.AddIdentity<ApplicationUsers, IdentityRole>()
+                Options => {
+                    Options.Password.RequireDigit = true;
+                    Options.Password.RequireLowercase = true;
+                    Options.Password.RequireUppercase = true;
+                    Options.Password.RequireNonAlphanumeric = true;
+                    Options.Password.RequiredLength = 6;
+                    Options.User.RequireUniqueEmail = true;
+                    Options.Lockout.MaxFailedAccessAttempts = 5;
+                    Options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                    Options.SignIn.RequireConfirmedEmail = true;
+
+                }
+                
+                )
                 .AddEntityFrameworkStores<ApplicationDpContext>()
                 .AddDefaultTokenProviders();
 
@@ -86,6 +103,40 @@ namespace KASHPE.PL
                 });
 
 
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "KASHOP API",
+                    Version = "v1"
+                });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,        
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter: Bearer {your JWT token}"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+            });
+
             var app = builder.Build();
 
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
@@ -104,7 +155,13 @@ namespace KASHPE.PL
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+            app.MapControllers();
+
+
+            app.Run();
 
             using (var scope =app.Services.CreateScope()) { 
                 var services = scope.ServiceProvider;
@@ -115,9 +172,9 @@ namespace KASHPE.PL
                 }
             }
 
-                app.MapControllers();
+                
 
-            app.Run();
+            
         }
     }
 }

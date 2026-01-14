@@ -63,7 +63,13 @@ namespace DAL.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<DateTime?>("PasswodResretCodeExpirty")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordResetCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")

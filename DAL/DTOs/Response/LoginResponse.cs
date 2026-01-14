@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace DAL.DTOs.Response
 {
-    public class LoginResponse
+    public class LoginResponse :BaseResponse
     {
-        public string Message { set; get; }
-        public bool Success { get; set; }
-        public List<string>? error { get; set; }
+       
         public string ?AccessToken { get; set; }
     }
 }

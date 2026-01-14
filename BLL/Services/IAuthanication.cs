@@ -12,6 +12,8 @@ namespace BLL.Services
     {
         Task<LoginResponse> LoginAsync(LoginRequest loginRequest);
         Task<RegisterResponse> RegisterAsync(RegisterRequest registerRequest);
-
+        Task<bool> ConfirmEmailAsync(string token,string userId);
+        Task<ForgetPasswordResponse> RequestPassowrdReset(ForgetPasswordRequest request);
+        Task<ResetPasswordResponse> PassowrdReset(RestPasswordRequest request);
     }
 }

@@ -1,5 +1,42 @@
 [
   {
+    "ContainingType": "KASHPE.PL.Area.Admin.categoriesController",
+    "Method": "Create",
+    "RelativePath": "api/admin/categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestCategory",
+        "Type": "DAL.DTOs.Request.requestCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/auth/Accounts/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
     "Method": "Login",
     "RelativePath": "api/auth/Accounts/Login",
@@ -32,7 +69,39 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHPE.PL.Controllers.CategoriesController",
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/Accounts/ResetPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DAL.DTOs.Request.RestPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/auth/Accounts/SendCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DAL.DTOs.Request.ForgetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Users.CategoriesController",
     "Method": "index",
     "RelativePath": "api/Categories",
     "HttpMethod": "GET",
@@ -40,42 +109,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHPE.PL.Controllers.CategoriesController",
-    "Method": "Create",
-    "RelativePath": "api/Categories",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "DAL.DTOs.Request.requestCategory",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHPE.PL.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[KASHPE.PL.WeatherForecast, KASHPE.PL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

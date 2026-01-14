@@ -12,5 +12,7 @@ namespace DAL.Models
         public string City { get; set; }="NotSet";
         public string Street { get; set; }="NotSet";
         public string FullName { get; set; }
+        public string? PasswordResetCode { get; set; }
+        public DateTime? PasswodResretCodeExpirty { get; set; }
     }
 }
