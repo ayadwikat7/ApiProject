@@ -3,27 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\KASHOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\iauthanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\iauthanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\area\\identity\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\area\\identity\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\models\\applicationusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\models\\applicationusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\dtos\\response\\resetpasswordresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\dtos\\response\\resetpasswordresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./KASHOPE13/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\utils\\userseeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\utils\\userseeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\appconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\appconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\area\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\area\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,77 +41,90 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResetPasswordResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Response\\ResetPasswordResponse.cs",
-              "RelativeDocumentMoniker": "DAL\\DTOs\\Response\\ResetPasswordResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Response\\ResetPasswordResponse.cs",
-              "RelativeToolTip": "DAL\\DTOs\\Response\\ResetPasswordResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T16:24:44.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./KASHOPE13/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-01-14T15:11:21.99Z",
+              "WhenOpened": "2026-01-15T08:50:51.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\identity\\AccountsController.cs",
-              "RelativeDocumentMoniker": "KASHPE.PL\\Area\\identity\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\identity\\AccountsController.cs",
-              "RelativeToolTip": "KASHPE.PL\\Area\\identity\\AccountsController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAIAxwEUAAAA7AAAAAAAAAA==",
+              "Title": "UserSeedDate.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Utils\\UserSeedDate.cs",
+              "RelativeDocumentMoniker": "DAL\\Utils\\UserSeedDate.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Utils\\UserSeedDate.cs",
+              "RelativeToolTip": "DAL\\Utils\\UserSeedDate.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T15:02:10.587Z",
+              "WhenOpened": "2026-01-15T08:43:10.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAuthanication.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\IAuthanication.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\IAuthanication.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\IAuthanication.cs",
-              "RelativeToolTip": "BLL\\Services\\IAuthanication.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAArwBAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:53:20.188Z",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.json",
+              "RelativeDocumentMoniker": "KASHPE.PL\\appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.json",
+              "RelativeToolTip": "KASHPE.PL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-15T08:45:10.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationUsers.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\ApplicationUsers.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\ApplicationUsers.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\ApplicationUsers.cs",
-              "RelativeToolTip": "DAL\\Models\\ApplicationUsers.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "categoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Admin\\categoriesController.cs",
+              "RelativeDocumentMoniker": "KASHPE.PL\\Area\\Admin\\categoriesController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Admin\\categoriesController.cs",
+              "RelativeToolTip": "KASHPE.PL\\Area\\Admin\\categoriesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:44:44.627Z",
+              "WhenOpened": "2026-01-15T08:39:37.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Authanication.cs",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\Authanication.cs",
               "RelativeDocumentMoniker": "BLL\\Services\\Authanication.cs",
               "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\Authanication.cs",
               "RelativeToolTip": "BLL\\Services\\Authanication.cs",
-              "ViewState": "AgIAAPYAAAAAAAAAAADwvxoBAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAkwLgAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T14:38:31.939Z",
+              "WhenOpened": "2026-01-15T08:32:57.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs",
+              "RelativeDocumentMoniker": "KASHPE.PL\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs*",
+              "RelativeToolTip": "KASHPE.PL\\Program.cs*",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAQwLgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:59:16.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppConfigration.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\AppConfigration.cs",
+              "RelativeDocumentMoniker": "KASHPE.PL\\AppConfigration.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\AppConfigration.cs",
+              "RelativeToolTip": "KASHPE.PL\\AppConfigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:59:10.401Z",
               "EditorCaption": ""
             }
           ]

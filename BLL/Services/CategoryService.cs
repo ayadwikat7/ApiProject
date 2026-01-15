@@ -23,6 +23,7 @@ namespace BLL.Services
         public responseCategory CreateCategory(requestCategory Request)
         {
            var ctaegory= Request.Adapt<Category>();
+            
             _categoryRepository.CreateCategory(ctaegory);
             return ctaegory.Adapt<responseCategory>();
 

@@ -54,12 +54,16 @@ namespace KASHPE.PL
                 });
 
             });
-            builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
+            /*  builder.Services.AddScoped<ICategoryRepository,CategoryRepository>(); 
+              builder.Services.AddScoped<ICategorySevices, CategoryService>();
 
-            builder.Services.AddScoped<ICategorySevices, CategoryService>();
-            builder.Services.AddScoped<IAuthanication, Authanication>();
+              builder.Services.AddScoped<IAuthanication, Authanication>();
+              builder.Services.AddTransient<IEmailSender, EmailSender>();
+              builder.Services.AddScoped<ISeedData, RoleSeedData>();
+              builder.Services.AddScoped<ISeedData, UserSeedDate>();*/ //session 12 part 2
+
             builder.Services.AddSwaggerGen();
-            builder.Services.AddTransient<IEmailSender, EmailSender>();
+            AppConfigration.config(builder.Services); //session 12 part 2
             builder.Services.AddIdentity<ApplicationUsers, IdentityRole>(
 
                 Options => {
@@ -79,8 +83,7 @@ namespace KASHPE.PL
                 .AddEntityFrameworkStores<ApplicationDpContext>()
                 .AddDefaultTokenProviders();
 
-            builder.Services.AddScoped<ISeedData, RoleSeedData>();
-            builder.Services.AddScoped<ISeedData, UserSeedDate>();
+         
 
             builder.Services.AddAuthentication(opt =>
             {
@@ -161,20 +164,31 @@ namespace KASHPE.PL
             app.MapControllers();
 
 
-            app.Run();
 
-            using (var scope =app.Services.CreateScope()) { 
-                var services = scope.ServiceProvider;
-                var seedDatas = services.GetServices<ISeedData>();
-                foreach (var seedData in seedDatas)
+
+            using (var scope = app.Services.CreateScope())
+            {
+                try
                 {
-                  await  seedData.DataSeed();
+                    var services = scope.ServiceProvider;
+                    var seedDatas = services.GetServices<ISeedData>();
+
+                    foreach (var seedData in seedDatas)
+                    {
+                        await seedData.DataSeed();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("SEED ERROR: " + ex.Message);
+                    Console.WriteLine(ex.ToString());
+                    throw; 
                 }
             }
 
-                
+            app.Run();
 
-            
+
         }
     }
 }

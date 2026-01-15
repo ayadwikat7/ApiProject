@@ -1,18 +1,24 @@
 ﻿
 using DAL.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Security.Claims;
 
 namespace DAL.Data
 {
     public class ApplicationDpContext : IdentityDbContext<ApplicationUsers>
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
         public DbSet<Category> Caregories { get; set; }
         public DbSet<CategorTransoulation> CategorTransoulations { get; set; }
-        public ApplicationDpContext(DbContextOptions<ApplicationDpContext> options)
+        public ApplicationDpContext(DbContextOptions<ApplicationDpContext> options,IHttpContextAccessor httpContextAccessor)
             : base(options)
         {
+            _httpContextAccessor = httpContextAccessor;
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -26,6 +32,28 @@ namespace DAL.Data
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
         }
+
+        public override int SaveChanges()// session 12 part1
+        {
+            var entries = ChangeTracker.Entries<baseModel>();// session 12 part1
+            var CurrentId=  _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            foreach (var entry in entries)// session 12 part1
+            {
+                if (entry.State == EntityState.Added)// session 12 part1
+                {
+                    entry.Entity.createCateg = DateTime.UtcNow;// session 12 part1
+                    entry.Entity.CreatedAt = DateTime.UtcNow;// session 12 part1
+                    entry.Entity.CreatedBy = CurrentId;// session 12 part1
+                }
+                else if (entry.State == EntityState.Modified)// session 12 part1
+                {
+                    entry.Entity.UpdatedAt = DateTime.UtcNow;// session 12 part1
+                    entry.Entity.UpdatedBy = CurrentId;// session 12 part1
+                }
+            }
+            return base.SaveChanges();// session 12 part1
+        }
+
 
 
 

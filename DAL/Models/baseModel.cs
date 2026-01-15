@@ -12,5 +12,10 @@ namespace DAL.Models
 
         public statuse status { get; set; } = statuse.Active;
         public DateTime createCateg { get; set; }
+        public string CreatedBy { get; set; }// session 12 part1
+        public DateTime? UpdatedAt { get; set; }// session 12 part1
+        public string? UpdatedBy { get; set; }// session 12 part1
+        public DateTime? CreatedAt { get; set; }// session 12 part1
+
     }
 }

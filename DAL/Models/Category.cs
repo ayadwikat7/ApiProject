@@ -9,7 +9,7 @@ namespace DAL.Models
     public class Category : baseModel
     {
 
- 
+     
 
         public List<CategorTransoulation> CategorTransoulations { get; set; }
 
