@@ -99,6 +99,7 @@ namespace KASHPE.PL
                     {
                         ValidateIssuer = true,
                         ValidateAudience = true,
+                        ClockSkew=TimeSpan.Zero,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = builder.Configuration["Jwt:Issuer"],

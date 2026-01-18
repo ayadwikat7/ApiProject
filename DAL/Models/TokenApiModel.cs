@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DTOs.Response
+namespace DAL.Models
 {
-    public class LoginResponse :BaseResponse
+    public class TokenApiModel
     {
-       
-        public string ?AccessToken { get; set; }
+        public string? AccessToken { get; set; }
         public string? RefreshToken { get; set; }
     }
 }

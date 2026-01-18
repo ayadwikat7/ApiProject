@@ -23,6 +23,7 @@ namespace KASHPE.PL
             Services.AddScoped<IProductService, ProductsService>();
 
             Services.AddScoped<IproductsRepository,ProductsRepository>();
+            Services.AddScoped<ITokenService,TokenService>();
         }
     }
 }

@@ -14,5 +14,7 @@ namespace DAL.Models
         public string FullName { get; set; }
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswodResretCodeExpirty { get; set; }
+        public string? RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }

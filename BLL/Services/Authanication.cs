@@ -1,9 +1,10 @@
-﻿ using DAL.DTOs.Request;
+﻿using DAL.DTOs.Request;
 using DAL.DTOs.Response;
 using DAL.Models;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -22,10 +23,11 @@ namespace BLL.Services
         private readonly IConfiguration _configuration;
         private readonly IEmailSender _emailSender;
         private readonly SignInManager<ApplicationUsers> _signInManager;
+        private readonly ITokenService _tokenService;
 
         public Authanication(UserManager<ApplicationUsers> userManager, IConfiguration configuration,
 
-            IEmailSender emailSender, SignInManager<ApplicationUsers> signInManager
+            IEmailSender emailSender, SignInManager<ApplicationUsers> signInManager, ITokenService tokenService
             )
 
 
@@ -34,6 +36,7 @@ namespace BLL.Services
             _configuration = configuration;
             _emailSender = emailSender;
             _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
         public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest)
@@ -91,12 +94,17 @@ namespace BLL.Services
 
                     };
                 }
-
+                var accessToken = await _tokenService.GenerateAccessTokenAsync(user);
+                var refreshToken = _tokenService.GenerateRefreshToken();
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpiryTime= DateTime.UtcNow.AddDays(7);
+               await _userManager.UpdateAsync(user);
                 return new LoginResponse()
                 {
                     Success = true,
                     Message = "Sucess Login",
-                    AccessToken = await GenerateToke(user)
+                    AccessToken = accessToken,
+                   RefreshToken= refreshToken
 
                 };
             }
@@ -174,37 +182,6 @@ namespace BLL.Services
             }
         }
 
-        public async Task<string> GenerateToke(ApplicationUsers user)
-        {
-            var roles = await _userManager.GetRolesAsync(user);
-
-            var userClime = new List<Claim>()
-{
-    new Claim(ClaimTypes.NameIdentifier, user.Id),
-    new Claim(ClaimTypes.Email, user.Email),
-    new Claim(ClaimTypes.Name, user.FullName),
-};
-
-            foreach (var role in roles)
-            {
-                userClime.Add(new Claim(ClaimTypes.Role, role));
-            }
-
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: userClime,
-                expires: DateTime.Now.AddMinutes(30),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-
-
-        }
 
 
         public async Task<ForgetPasswordResponse> RequestPassowrdReset(ForgetPasswordRequest request)
@@ -290,6 +267,38 @@ namespace BLL.Services
                 Success = true,
                 Message = "Password Reset Sucssefully."
             };
+        }
+
+        public async Task<LoginResponse> RefreshTokenAsync(TokenApiModel request) {
+            string accessToken = request.AccessToken;
+            string refreshToken = request.RefreshToken;
+            var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
+
+            var userName= principal.Identity.Name;
+            var user = await _userManager.Users
+    .FirstOrDefaultAsync(u => u.UserName == userName);
+
+            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            {
+                return new LoginResponse()
+                {
+                    Success = false,
+                    Message = "invalid client request"
+                };
+            }
+
+            var newAccessToken = await _tokenService.GenerateAccessTokenAsync(user);
+            var newRefreshToken = _tokenService.GenerateRefreshToken();
+              user.RefreshToken = newRefreshToken; 
+            await _userManager.UpdateAsync(user);
+            return new LoginResponse()
+            {
+                Success = true,
+                Message = "Token refreshed successfully",
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken
+            };
+
         }
 
     }

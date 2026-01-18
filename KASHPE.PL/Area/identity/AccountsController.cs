@@ -1,5 +1,6 @@
 ﻿using BLL.Services;
 using DAL.DTOs.Request;
+using DAL.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -73,6 +74,18 @@ namespace KASHPE.PL.Area.identity
                 return BadRequest(Result);
             }
             return Ok(Result);
+        }
+        [HttpPatch("RefreshToken")]
+        public async Task<IActionResult> RefreshToekn(TokenApiModel request)
+        {
+            var result = await _authanication.RefreshTokenAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
         }
 
     }

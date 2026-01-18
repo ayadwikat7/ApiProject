@@ -173,6 +173,22 @@
   },
   {
     "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
+    "Method": "RefreshToekn",
+    "RelativePath": "api/auth/Accounts/RefreshToken",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DAL.Models.TokenApiModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.identity.AccountsController",
     "Method": "Register",
     "RelativePath": "api/auth/Accounts/Registration",
     "HttpMethod": "POST",
