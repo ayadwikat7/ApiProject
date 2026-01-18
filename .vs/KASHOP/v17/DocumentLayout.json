@@ -3,31 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\KASHOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./KASHOPE13/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\utils\\userseeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\utils\\userseeddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\appconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\appconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Migrations\\20260118093456_addAll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20260118093456_addAll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\mapesterconfigration\\mapesterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\mapesterconfigration\\mapesterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\area\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\area\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\models\\productsimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\models\\productsimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\authanication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\dtos\\response\\productsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\dtos\\response\\productsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\dtos\\request\\productstransulationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\dtos\\request\\productstransulationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\dtos\\request\\productsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\dtos\\request\\productsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,94 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./KASHOPE13/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-01-15T08:50:51.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserSeedDate.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Utils\\UserSeedDate.cs",
-              "RelativeDocumentMoniker": "DAL\\Utils\\UserSeedDate.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Utils\\UserSeedDate.cs",
-              "RelativeToolTip": "DAL\\Utils\\UserSeedDate.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwCQAAAArAAAAAAAAAA==",
+              "Title": "ProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\ProductsRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repository\\ProductsRepository.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\ProductsRepository.cs",
+              "RelativeToolTip": "DAL\\Repository\\ProductsRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwB0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:43:10.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.json",
-              "RelativeDocumentMoniker": "KASHPE.PL\\appsettings.json",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.json",
-              "RelativeToolTip": "KASHPE.PL\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-15T08:45:10.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "categoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Admin\\categoriesController.cs",
-              "RelativeDocumentMoniker": "KASHPE.PL\\Area\\Admin\\categoriesController.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Admin\\categoriesController.cs",
-              "RelativeToolTip": "KASHPE.PL\\Area\\Admin\\categoriesController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:39:37.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Authanication.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\Authanication.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\Authanication.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\Authanication.cs",
-              "RelativeToolTip": "BLL\\Services\\Authanication.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAkwLgAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T08:32:57.209Z",
+              "WhenOpened": "2026-01-18T09:38:10.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs",
-              "RelativeDocumentMoniker": "KASHPE.PL\\Program.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs",
-              "RelativeToolTip": "KASHPE.PL\\Program.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAQwLgAAAAbAAAAAAAAAA==",
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\Product.cs",
+              "RelativeToolTip": "DAL\\Models\\Product.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwBYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T07:59:16.109Z",
+              "WhenOpened": "2026-01-18T09:28:33.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AppConfigration.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\AppConfigration.cs",
-              "RelativeDocumentMoniker": "KASHPE.PL\\AppConfigration.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\AppConfigration.cs",
-              "RelativeToolTip": "KASHPE.PL\\AppConfigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Title": "20260118093456_addAll.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Migrations\\20260118093456_addAll.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20260118093456_addAll.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Migrations\\20260118093456_addAll.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20260118093456_addAll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T07:59:10.401Z",
+              "WhenOpened": "2026-01-18T09:34:56.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapesterConfig.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\MapesterConfigration\\MapesterConfig.cs",
+              "RelativeDocumentMoniker": "BLL\\MapesterConfigration\\MapesterConfig.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\MapesterConfigration\\MapesterConfig.cs",
+              "RelativeToolTip": "BLL\\MapesterConfigration\\MapesterConfig.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:31:44.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsImage.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\ProductsImage.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\ProductsImage.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\ProductsImage.cs",
+              "RelativeToolTip": "DAL\\Models\\ProductsImage.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvwwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:28:44.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductsResponse.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Response\\ProductsResponse.cs",
+              "RelativeDocumentMoniker": "DAL\\DTOs\\Response\\ProductsResponse.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Response\\ProductsResponse.cs",
+              "RelativeToolTip": "DAL\\DTOs\\Response\\ProductsResponse.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:28:06.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsTRansulationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Request\\ProductsTRansulationRequest.cs",
+              "RelativeDocumentMoniker": "DAL\\DTOs\\Request\\ProductsTRansulationRequest.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Request\\ProductsTRansulationRequest.cs",
+              "RelativeToolTip": "DAL\\DTOs\\Request\\ProductsTRansulationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:27:23.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Request\\ProductsRequest.cs",
+              "RelativeDocumentMoniker": "DAL\\DTOs\\Request\\ProductsRequest.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\DTOs\\Request\\ProductsRequest.cs",
+              "RelativeToolTip": "DAL\\DTOs\\Request\\ProductsRequest.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:27:10.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\ProductsService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\ProductsService.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\ProductsService.cs",
+              "RelativeToolTip": "BLL\\Services\\ProductsService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:26:12.168Z",
               "EditorCaption": ""
             }
           ]

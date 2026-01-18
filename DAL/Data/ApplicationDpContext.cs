@@ -15,6 +15,9 @@ namespace DAL.Data
 
         public DbSet<Category> Caregories { get; set; }
         public DbSet<CategorTransoulation> CategorTransoulations { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductTransulation> ProductsTransoulations { get; set; }
+        public DbSet<ProductsImage> ProductImages { get; set; }
         public ApplicationDpContext(DbContextOptions<ApplicationDpContext> options,IHttpContextAccessor httpContextAccessor)
             : base(options)
         {
@@ -31,8 +34,38 @@ namespace DAL.Data
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
+            builder.Entity<Category>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.CreatedBy)
+                .OnDelete(DeleteBehavior.NoAction);
         }
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            var entries = ChangeTracker.Entries<baseModel>();// session 12 part1
+            if (_httpContextAccessor.HttpContext != null)
+            {
+                var CurrentId = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+                foreach (var entry in entries)// session 12 part1
+                {
+                    if (entry.State == EntityState.Added)// session 12 part1
+                    {
+                        entry.Entity.createCateg = DateTime.UtcNow;// session 12 part1
+                        entry.Entity.CreatedAt = DateTime.UtcNow;// session 12 part1
+                        entry.Entity.CreatedBy = CurrentId;// session 12 part1
+                    }
+                    else if (entry.State == EntityState.Modified)// session 12 part1
+                    {
+                        entry.Entity.UpdatedAt = DateTime.UtcNow;// session 12 part1
+                        entry.Entity.UpdatedBy = CurrentId;// session 12 part1
+                    }
+                }
+            }
+            
+           
+            return base.SaveChangesAsync(cancellationToken);
+        }
         public override int SaveChanges()// session 12 part1
         {
             var entries = ChangeTracker.Entries<baseModel>();// session 12 part1

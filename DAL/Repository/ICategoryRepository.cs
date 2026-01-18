@@ -10,7 +10,12 @@ namespace DAL.Repository
 {
     public interface ICategoryRepository
     {
-        List<Category> GetAll();
-        Category CreateCategory(Category Request);
+        Task<List<Category>> GetAllAsy();
+        Task<Category> CreateCategoryAsy(Category Request);
+        Task<Category?> GetById(int id);//session 13 part1
+        Task DeleteCategory(Category category);//session 13 part1
+
+        Task UpdateCategory(Category category);//session 13 part2
     }
+
 }

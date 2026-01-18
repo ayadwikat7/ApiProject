@@ -13,5 +13,7 @@ namespace DAL.Models
 
         public List<CategorTransoulation> CategorTransoulations { get; set; }
 
+        public List<Product> Products { get; set; }
+
     }
 }

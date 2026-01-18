@@ -9,6 +9,7 @@ namespace DAL.DTOs.Response
     public class CategoryTransulationResponse
     {
         public string Name { get; set; }
+     
         public string Language { get; set; }
     }
 }

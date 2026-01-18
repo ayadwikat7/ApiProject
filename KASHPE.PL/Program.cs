@@ -1,4 +1,5 @@
 
+using BLL.MapesterConfigration;
 using BLL.Services;
 using DAL.Data;
 using DAL.Models;
@@ -64,6 +65,8 @@ namespace KASHPE.PL
 
             builder.Services.AddSwaggerGen();
             AppConfigration.config(builder.Services); //session 12 part 2
+            MapesterConfig.MapesterConfiguration();
+            
             builder.Services.AddIdentity<ApplicationUsers, IdentityRole>(
 
                 Options => {
@@ -151,7 +154,7 @@ namespace KASHPE.PL
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
-
+                app.UseStaticFiles();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }

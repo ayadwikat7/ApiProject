@@ -4,6 +4,7 @@ using KASHPE.PL.Resoureses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Threading.Tasks;
 
 namespace KASHPE.PL.Area.Users
 {
@@ -23,8 +24,8 @@ namespace KASHPE.PL.Area.Users
         }
 
         [HttpGet("")] 
-        public IActionResult index() {
-            var response = _categorySevices.GetAllCategory();
+        public async Task<IActionResult> index([FromQuery]string lan="en") {
+            var response =await _categorySevices.GetAllCategoryForUser(lan);
             return Ok(new { message = _stringLocalizer["Success"].Value, 
                 response }); 
         }

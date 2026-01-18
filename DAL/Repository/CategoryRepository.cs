@@ -18,16 +18,32 @@ namespace DAL.Repository
             _context = context;
         }
 
-        public Category CreateCategory(Category Request)
+        public async Task<Category> CreateCategoryAsy(Category Request)
         {
-            _context.Caregories.Add(Request);
-            _context.SaveChanges();
+           await _context.Caregories.AddAsync(Request);
+          await  _context.SaveChangesAsync();
             return Request;
         }
 
-        public List<Category> GetAll()
+        public async Task<List<Category>> GetAllAsy()
         {
-            return _context.Caregories.Include(c => c.CategorTransoulations).ToList();
+            return await _context.Caregories.Include(c => c.CategorTransoulations).Include(c => c.User).ToListAsync();
         }
+
+        public async Task<Category?> GetById(int id)//session 13 part1
+        {
+            return await _context.Caregories.Include(c => c.CategorTransoulations).FirstOrDefaultAsync(c => c.Id == id);//session 13 part1
+        }
+        public async Task DeleteCategory(Category category)//session 13 part1
+        {
+            _context.Caregories.Remove(category);//session 13 part1
+            await _context.SaveChangesAsync();//session 13 part1
+        }
+        public async Task UpdateCategory(Category category)//session 13 part2
+        {
+            _context.Caregories.Update(category);//session 13 part2
+            await _context.SaveChangesAsync();//session 13 part2
+        }
+
     }
 }

@@ -11,7 +11,14 @@ namespace BLL.Services
 {
     public interface ICategorySevices
     {
-        List<responseCategory> GetAllCategory();
-        responseCategory CreateCategory(requestCategory Request);
+        Task<List<responseCategory>> GetAllCategory();
+        Task<List<CategoryUserResponse>> GetAllCategoryForUser(string lan = "en");
+        Task<responseCategory> CreateCategory(requestCategory Request);
+        Task<BaseResponse> DeleteCategory(int id);
+        Task<BaseResponse> UpdateCategory(int id, requestCategory Request);
+        Task<BaseResponse> TaggelStateuse(int id);
+
+
+
     }
 }

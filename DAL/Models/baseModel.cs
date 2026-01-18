@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,10 @@ namespace DAL.Models
         public DateTime? UpdatedAt { get; set; }// session 12 part1
         public string? UpdatedBy { get; set; }// session 12 part1
         public DateTime? CreatedAt { get; set; }// session 12 part1
+
+
+        [ForeignKey("CreatedBy")]
+        public ApplicationUsers User { get; set; }
 
     }
 }

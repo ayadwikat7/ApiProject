@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace DAL.DTOs.Response
@@ -10,6 +11,8 @@ namespace DAL.DTOs.Response
     public class responseCategory
     {
         public int Id { get; set; }
+        public string CreatedBy { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public statuse Statuse { get; set; }
         public List<CategoryTransulationResponse> CategorTransoulations { get; set; }
     }

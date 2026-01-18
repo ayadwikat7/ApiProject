@@ -15,7 +15,14 @@ namespace KASHPE.PL
             Services.AddScoped<IAuthanication, Authanication>();
            Services.AddTransient<IEmailSender, EmailSender>();
             Services.AddScoped<ISeedData, RoleSeedData>();
-           Services.AddScoped<ISeedData, UserSeedDate>();
+            Services.AddScoped<ISeedData, UserSeedDate>();
+
+
+
+           Services.AddScoped<IFileService, FileService>();
+            Services.AddScoped<IProductService, ProductsService>();
+
+            Services.AddScoped<IproductsRepository,ProductsRepository>();
         }
     }
 }

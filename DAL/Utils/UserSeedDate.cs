@@ -50,7 +50,7 @@ namespace DAL.Utils
                 };
                 await _userManager.CreateAsync(user1, "Aa@12345678");
                 await _userManager.CreateAsync(user2, "Aa@12355555");
-                await _userManager.CreateAsync(user3,"AAA55@4567A");
+                await _userManager.CreateAsync(user3, "AAA55@4567a");
 
                 await _userManager.AddToRoleAsync(user3, "SuperAdmain");
                 await _userManager.AddToRoleAsync(user1, "Admin");

@@ -25,4 +25,16 @@
     <ProjectReference Include="..\BLL\BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\14e45f6f-9156-4c7c-bb78-26036f189e39.JPG" />
+    <None Include="wwwroot\images\62070807-49b0-4c7e-92f4-1f59ad557d94.JPG" />
+    <None Include="wwwroot\images\6328790d-132c-4911-867f-32fc79401cb3.JPG" />
+    <None Include="wwwroot\images\920d84b5-9ffd-4a54-b604-194485052a0a.JPG" />
+    <None Include="wwwroot\images\cd45d9e2-c476-440b-9c5e-e4579be7ce0b.JPG" />
+  </ItemGroup>
+
 </Project>

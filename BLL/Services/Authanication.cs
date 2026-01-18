@@ -176,16 +176,21 @@ namespace BLL.Services
 
         public async Task<string> GenerateToke(ApplicationUsers user)
         {
-            var roles = await _userManager.GetRolesAsync(user); //session 12 part 3
-            var userClime = new List<Claim>() {
+            var roles = await _userManager.GetRolesAsync(user);
 
-            new Claim(ClaimTypes.NameIdentifier,user.Id),
-            new Claim(ClaimTypes.Email,user.Email),
-            new Claim(ClaimTypes.Name,user.FullName),
-            new Claim(ClaimTypes.Role,string.Join(",",roles))//session 12 part 3
+            var userClime = new List<Claim>()
+{
+    new Claim(ClaimTypes.NameIdentifier, user.Id),
+    new Claim(ClaimTypes.Email, user.Email),
+    new Claim(ClaimTypes.Name, user.FullName),
+};
 
-            };
-           
+            foreach (var role in roles)
+            {
+                userClime.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
