@@ -24,6 +24,11 @@ namespace KASHPE.PL
 
             Services.AddScoped<IproductsRepository,ProductsRepository>();
             Services.AddScoped<ITokenService,TokenService>();
+            Services.AddScoped<ICartService, CartService>();
+            Services.AddScoped<ICartRepository, CartRepository>();
+            Services.AddScoped<ICheckOutServise, CheckOutServise>();
+            Services.AddScoped<IOrderRepository, OrderRepository>();
+            Services.AddScoped<IOderItemsRepository, OrderItemsRepository>();
         }
     }
 }

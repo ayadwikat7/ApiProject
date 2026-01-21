@@ -29,6 +29,20 @@ namespace BLL.MapesterConfigration
                 .NewConfig();
 
 
+
+            TypeAdapterConfig<Product, ProductsUserResponse>.NewConfig()
+                .Map(dest => dest.MainImage,
+                       src => src.MainImage != null
+                          ? $"https://localhost:7229/images/{src.MainImage}"
+                          : null)
+
+             .Map(dest => dest.Name, source => source.ProductTransulations != null
+                 ? source.ProductTransulations
+                     .Where(t => t.Language == MapContext.Current.Parameters["lan"].ToString())
+                     .Select(t => t.Name)
+                     .FirstOrDefault()
+                 : null);
+
             TypeAdapterConfig<Product, ProductsResponse>
                   .NewConfig()
                   .Map(dest => dest.CreatedBy, src => src.CreatedBy)
@@ -49,6 +63,24 @@ namespace BLL.MapesterConfigration
                        src => src.ProductTransulations != null
                           ? src.ProductTransulations.Adapt<List<ProductsTransulationResponse>>()
                           : new List<ProductsTransulationResponse>());
+
+            TypeAdapterConfig<Product,ProductsUserDetailes>
+    .NewConfig()
+    .Map(dest => dest.MainImage,
+                       src => src.MainImage != null
+                          ? $"https://localhost:7229/images/{src.MainImage}"
+                          : null)
+    .Map(dest => dest.Name,
+         source => source.ProductTransulations
+             .Where(t => t.Language == MapContext.Current.Parameters["lan"].ToString())
+             .Select(t => t.Name)
+             .FirstOrDefault())
+    .Map(dest => dest.Description,
+         source => source.ProductTransulations
+             .Where(t => t.Language == MapContext.Current.Parameters["lan"].ToString())
+             .Select(t => t.Description)
+             .FirstOrDefault());
+
 
         }
 

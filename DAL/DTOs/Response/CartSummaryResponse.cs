@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL.DTOs.Response
+{
+    public class CartSummaryResponse
+    {
+        public List<CartResponse> Carts { get; set; } 
+        public decimal TotalAmount => Carts.Sum(c => c.TotalPrice);
+    }
+}

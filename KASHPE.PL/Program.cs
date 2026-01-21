@@ -1,4 +1,5 @@
 
+using BLL;
 using BLL.MapesterConfigration;
 using BLL.Services;
 using DAL.Data;
@@ -13,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Stripe;
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +34,9 @@ namespace KASHPE.PL
             builder.Services.AddOpenApi();
 
             builder.Services.AddLocalization(options => options.ResourcesPath = "");
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
             builder.Services.AddDbContext<ApplicationDpContext>(options =>
               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             const string defaultCulture = "en";

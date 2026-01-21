@@ -18,6 +18,9 @@ namespace DAL.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTransulation> ProductsTransoulations { get; set; }
         public DbSet<ProductsImage> ProductImages { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public ApplicationDpContext(DbContextOptions<ApplicationDpContext> options,IHttpContextAccessor httpContextAccessor)
             : base(options)
         {
@@ -38,6 +41,11 @@ namespace DAL.Data
                 .HasOne(c => c.User)
                 .WithMany()
                 .HasForeignKey(c => c.CreatedBy)
+                .OnDelete(DeleteBehavior.NoAction);
+            builder.Entity<Cart>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

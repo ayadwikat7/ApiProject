@@ -1,14 +1,18 @@
 ﻿using DAL.Data;
 using DAL.DTOs.Request;
 using DAL.DTOs.Response;
+using DAL.Migrations;
 using DAL.Models;
 using DAL.Repository;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BLL.Services
 {
@@ -82,6 +86,69 @@ namespace BLL.Services
         {
             var products = await _productsRepository.GetAllAsy();
             var response = products.Adapt<List<ProductsResponse>>();
+            return response;
+        }
+
+        public async Task<PaginatedResponse<ProductsUserResponse>> GetAllProductsForUser(
+            string lan = "en", int page = 1, 
+            int limit = 3,string?search=null,
+                int? categoryId = null,
+    decimal? minPrice = null,
+    decimal? maxPrice = null)
+
+        {
+            var qyuery = _productsRepository.Query();
+            if (search is not null) { 
+                qyuery = qyuery.Where(p => p.ProductTransulations
+                .Any(t => t.Language == lan && t.Name.Contains(search)|| t.Description.Contains(search)));
+            }
+            if (categoryId is not null)
+            {
+                qyuery = qyuery.Where(p => p.CategoryId == categoryId);
+            }
+
+            if (minPrice is not null)
+            {
+                qyuery = qyuery.Where(p => p.Price >= minPrice);
+            }
+
+            if (maxPrice is not null)
+            {
+                qyuery = qyuery.Where(p => p.Price <= maxPrice);
+            }
+
+            qyuery = _productsRepository.Query();
+
+            var totalCount = await qyuery.CountAsync();
+
+            qyuery = qyuery.Skip((page - 1) * limit).Take(limit);
+
+            var response = qyuery
+                .BuildAdapter()
+                .AddParameters("lan", lan)
+                .AdaptToType<List<ProductsUserResponse>>();
+
+            return new PaginatedResponse<ProductsUserResponse>
+            {
+
+                TotalCount = totalCount,
+                Page = page,
+                Limit = limit,
+                Data = response
+            };
+
+
+        }
+
+        public async Task<ProductsUserDetailes> GetAllProductsDetailsForUser(int id, string lan = "en")
+        {
+            var product = await _productsRepository.FindByIdAsync(id);
+
+            var response = product
+                .BuildAdapter()
+                .AddParameters("lan", lan)
+                .AdaptToType<ProductsUserDetailes>();
+
             return response;
         }
 
