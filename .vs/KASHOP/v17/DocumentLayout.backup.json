@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\KASHOP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\area\\users\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\area\\users\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\area\\users\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\area\\users\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\repository\\iproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\repository\\iproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|c:\\users\\hp\\source\\repos\\kashop\\bll\\services\\checkoutservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24C7AD9F-E4AE-4B00-92E3-FC8D81099414}|BLL\\BLL.csproj|solutionrelative:bll\\services\\checkoutservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Users\\ProductsController.cs",
               "RelativeDocumentMoniker": "KASHPE.PL\\Area\\Users\\ProductsController.cs",
               "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Area\\Users\\ProductsController.cs",
               "RelativeToolTip": "KASHPE.PL\\Area\\Users\\ProductsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABoAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T04:48:13.028Z",
+              "WhenOpened": "2026-01-21T06:02:24.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\IProductService.cs",
               "RelativeDocumentMoniker": "BLL\\Services\\IProductService.cs",
               "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\IProductService.cs",
               "RelativeToolTip": "BLL\\Services\\IProductService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwBEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T04:45:42.898Z",
+              "WhenOpened": "2026-01-21T05:55:04.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductsService.cs",
               "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\ProductsService.cs",
               "RelativeDocumentMoniker": "BLL\\Services\\ProductsService.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\ProductsService.cs*",
-              "RelativeToolTip": "BLL\\Services\\ProductsService.cs*",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGAAAABWAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\ProductsService.cs",
+              "RelativeToolTip": "BLL\\Services\\ProductsService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T04:43:13.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CheckOutServise.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\CheckOutServise.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\CheckOutServise.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\BLL\\Services\\CheckOutServise.cs",
-              "RelativeToolTip": "BLL\\Services\\CheckOutServise.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAArwCAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:45:22.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\ProductsRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repository\\ProductsRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\ProductsRepository.cs",
-              "RelativeToolTip": "DAL\\Repository\\ProductsRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:41:01.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IproductsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\IproductsRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Repository\\IproductsRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Repository\\IproductsRepository.cs",
-              "RelativeToolTip": "DAL\\Repository\\IproductsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T18:38:09.77Z",
+              "WhenOpened": "2026-01-21T05:52:29.535Z",
               "EditorCaption": ""
             }
           ]
