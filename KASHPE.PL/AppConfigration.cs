@@ -29,6 +29,9 @@ namespace KASHPE.PL
             Services.AddScoped<ICheckOutServise, CheckOutServise>();
             Services.AddScoped<IOrderRepository, OrderRepository>();
             Services.AddScoped<IOderItemsRepository, OrderItemsRepository>();
+            Services.AddExceptionHandler<GlobaleExceptionHandler>();
+
+            Services.AddProblemDetails();
         }
     }
 }

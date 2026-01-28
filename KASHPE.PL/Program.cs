@@ -6,6 +6,7 @@ using DAL.Data;
 using DAL.Models;
 using DAL.Repository;
 using DAL.Utils;
+using KASHPE.PL.MiddelWare;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -165,7 +166,7 @@ namespace KASHPE.PL
             }
 
             app.UseHttpsRedirection();
-
+            app.UseMiddleware<GlobalExptionHandling>();
             app.UseAuthentication();
             app.UseAuthorization();
 

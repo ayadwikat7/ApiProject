@@ -90,18 +90,29 @@ namespace BLL.Services
         }
 
         public async Task<PaginatedResponse<ProductsUserResponse>> GetAllProductsForUser(
-            string lan = "en", int page = 1, 
-            int limit = 3,string?search=null,
-                int? categoryId = null,
-    decimal? minPrice = null,
-    decimal? maxPrice = null)
-
+            string lan = "en",
+            int page = 1,
+            int limit = 3,
+            string? search = null,
+            int? categoryId = null,
+            decimal? minPrice = null,
+            decimal? maxPrice = null,
+            string? sortBy = null,
+            bool isAscending = true
+        )
         {
             var qyuery = _productsRepository.Query();
-            if (search is not null) { 
-                qyuery = qyuery.Where(p => p.ProductTransulations
-                .Any(t => t.Language == lan && t.Name.Contains(search)|| t.Description.Contains(search)));
+
+            if (search is not null)
+            {
+                qyuery = qyuery.Where(p =>
+                    p.ProductTransulations.Any(t =>
+                        t.Language == lan &&
+                        (t.Name.Contains(search) || t.Description.Contains(search))
+                    )
+                );
             }
+
             if (categoryId is not null)
             {
                 qyuery = qyuery.Where(p => p.CategoryId == categoryId);
@@ -117,11 +128,41 @@ namespace BLL.Services
                 qyuery = qyuery.Where(p => p.Price <= maxPrice);
             }
 
-            qyuery = _productsRepository.Query();
+            if (sortBy is not null)
+            {
+                sortBy = sortBy.ToLower();
+
+                if (sortBy == "price")
+                {
+                    qyuery = isAscending
+                        ? qyuery.OrderBy(p => p.Price)
+                        : qyuery.OrderByDescending(p => p.Price);
+                }
+                else if (sortBy == "name")
+                {
+                    qyuery = isAscending
+                        ? qyuery.OrderBy(p =>
+                            p.ProductTransulations
+                                .FirstOrDefault(t => t.Language == lan)!.Name
+                        )
+                        : qyuery.OrderByDescending(p =>
+                            p.ProductTransulations
+                                .FirstOrDefault(t => t.Language == lan)!.Name
+                        );
+                }
+                else if (sortBy == "rate")
+                {
+                    qyuery = isAscending
+                        ? qyuery.OrderBy(p => p.Rate)
+                        : qyuery.OrderByDescending(p => p.Rate);
+                }
+            }
 
             var totalCount = await qyuery.CountAsync();
 
-            qyuery = qyuery.Skip((page - 1) * limit).Take(limit);
+            qyuery = qyuery
+                .Skip((page - 1) * limit)
+                .Take(limit);
 
             var response = qyuery
                 .BuildAdapter()
@@ -130,15 +171,13 @@ namespace BLL.Services
 
             return new PaginatedResponse<ProductsUserResponse>
             {
-
                 TotalCount = totalCount,
                 Page = page,
                 Limit = limit,
                 Data = response
             };
-
-
         }
+
 
         public async Task<ProductsUserDetailes> GetAllProductsDetailsForUser(int id, string lan = "en")
         {

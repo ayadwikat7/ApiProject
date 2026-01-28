@@ -17,7 +17,11 @@ namespace BLL.Services
              int limit = 3, string? search = null,
                  int? categoryId = null,
      decimal? minPrice = null,
-     decimal? maxPrice = null);
+     decimal? maxPrice = null,
+                     string? sortBy = null,
+                bool isAscending = true
+
+            );
 
         Task<ProductsUserDetailes> GetAllProductsDetailsForUser(int id, string lan = "en");
     }

@@ -26,7 +26,11 @@ namespace KASHPE.PL.Area.Users
     [FromQuery] string? search = null,
     [FromQuery] int? categoryId = null,
     [FromQuery] decimal? minPrice = null,
-    [FromQuery] decimal? maxPrice = null)
+    [FromQuery] decimal? maxPrice = null,
+    [FromQuery] string? sortBy = null,
+    [FromQuery] bool isAscending = true
+
+    )
         {
             var response = await _ProductsSevices.GetAllProductsForUser(
                   lan,
@@ -35,8 +39,10 @@ namespace KASHPE.PL.Area.Users
                     search,
                   categoryId,
                   minPrice,
-                  maxPrice
-                 
+                  maxPrice,
+                  sortBy,
+                    isAscending
+
               ); return Ok(new
             {
                 message = _stringLocalizer["Success"].Value,
