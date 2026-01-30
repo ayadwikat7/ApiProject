@@ -74,7 +74,8 @@ namespace BLL.Services
 
                 UserId = UserId,
                 PaymentMethod = request.PaymentMethod,
-                AmountPayed = TotalPrice
+                AmountPayed = TotalPrice,
+                PaiedStatus=PaiedStatus.UnPaied
             };
             if (request.PaymentMethod == PaymentMethod.Cash) {
 
@@ -141,6 +142,7 @@ namespace BLL.Services
                 var service = new SessionService();
                 var session = await service.CreateAsync(options);
                 order.SeessionId= session.Id;
+                order.PaiedStatus = PaiedStatus.Paid;
              await   _orderRepository.CreateAsync(order);
                 return new CheckOutResponse
                 {

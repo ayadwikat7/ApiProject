@@ -24,7 +24,10 @@ namespace BLL.Services
         public async Task<BaseResponse> AddToCartAsync(string userId, AddToCartRequest request)
         {
             var product = await _repository.FindByIdAsync(request.ProductId);
-            if (product.Quantity < request.Count)
+            var cartItem = await _cartRepository.GetCartItemAsync(userId, request.ProductId);
+
+            var existingProduct = cartItem?.Count??0;
+            if (product.Quantity < (request.Count+existingProduct))
             {
                 return new BaseResponse
                 {
@@ -33,7 +36,7 @@ namespace BLL.Services
                 };
 
             }
-
+           
 
             if (product is null) {
 
@@ -45,7 +48,6 @@ namespace BLL.Services
                 };
 
         }
-            var cartItem = await _cartRepository.GetCartItemAsync(userId, request.ProductId);
             if (cartItem is not null)
             {
                 cartItem.Count += request.Count;
@@ -90,7 +92,38 @@ namespace BLL.Services
             };
 
         }
+        public async Task<BaseResponse> UpdateQuantity(string userId, int productId,int count) {
 
+            var cartItems = await _cartRepository.GetCartItemAsync(userId,productId);
+
+            var product = await _repository.FindByIdAsync(productId);
+            if (count <= 0)
+            {
+
+                return new BaseResponse
+                {
+                    Message = "invalid quantity",
+                    Success = false
+                };
+            }
+            if (product.Quantity<count) {
+
+                return new BaseResponse
+                {
+                    Message = "not enough stack",
+                    Success =false
+                };
+            }
+            cartItems.Count = count;
+            await _cartRepository.UpdateAsync(cartItems);
+            return new BaseResponse
+            {
+                Message = "cart updated successfully",
+                Success = true
+            };
+
+
+        }
         public async Task<BaseResponse> ClearCartAsync(string userId)
         {
             await _cartRepository.ClearCartAsync(userId);
@@ -101,6 +134,22 @@ namespace BLL.Services
                 Message = "cart cleared successfully"
             };
         }
+        public async Task<BaseResponse> RemoveFromeCartAsync(string userId,int productId) {
+            var cartItem = await _cartRepository.GetCartItemAsync(userId, productId);
+            if (cartItem is null) {
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "Product not found in cart"
+                };
+            }
+            await _cartRepository.DeleteFromCartAsync(cartItem);
+            return new BaseResponse
+            {
+                Success = true,
+                Message = "Product removed from cart successfully"
+            };
 
+        }
     }
 }

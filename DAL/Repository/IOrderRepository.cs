@@ -13,5 +13,8 @@ namespace DAL.Repository
         Task<Order> CreateAsync(Order request);
         Task<Order> GetBySessionIdAsync(string sessiomId);
         Task<Order> UpdateAsync(Order order);
+        Task<bool> HasUserDeliverdOrderForProduct(string userId, int productId);
+        Task<List<Order>> GetOrderByStatuesAsync(OrderStatus status);
+        Task<Order?> GetOrderByIdAsync(int orderId);
     }
 }

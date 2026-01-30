@@ -1,5 +1,6 @@
 ﻿using BLL.Services;
 using DAL.DTOs.Request;
+using DAL.DTOs.Response;
 using KASHPE.PL.Resoureses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -49,5 +50,25 @@ namespace KASHPE.PL.Area.Users
             return Ok(result);
         }
 
+        [HttpDelete("{productId}")]
+        public async Task<IActionResult> DelteCartItem([FromRoute] int productId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var result = await _cartService.RemoveFromeCartAsync(userId,productId);
+
+            return Ok(result);
+        }
+
+        [HttpPatch("{productId}")]
+        public async Task<IActionResult> UpdateQuatity([FromRoute] int productId, [FromBody] UpdateQuatityReqest updateQuatity)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var result = await _cartService.UpdateQuantity(userId, productId, updateQuatity.Count);
+            if(!result.Success) return BadRequest(result);
+
+            return Ok(result);
+        }
     }
 }

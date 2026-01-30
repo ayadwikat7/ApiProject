@@ -13,5 +13,8 @@ namespace BLL.Services
         Task<BaseResponse> AddToCartAsync(string userId, AddToCartRequest request);
         Task<CartSummaryResponse> GetUserCartAsync(string userId, string lan= "en");
         Task<BaseResponse> ClearCartAsync(string userId);
-    }
+        Task<BaseResponse> RemoveFromeCartAsync(string userId, int productId);
+        Task<BaseResponse> UpdateQuantity(string userId, int productId, int count)
+    ;
+        }
 }

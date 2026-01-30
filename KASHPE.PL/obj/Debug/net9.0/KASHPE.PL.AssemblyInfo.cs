@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KASHPE.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a7fa6c1c7520e1d819ca52b6ecf6c2ae8fe5c6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa574406250e6ed1dffa897b95ad386d41b65ecd")]
 [assembly: System.Reflection.AssemblyProductAttribute("KASHPE.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KASHPE.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

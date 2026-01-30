@@ -1,4 +1,6 @@
-﻿namespace KASHPE.PL.MiddelWare
+﻿using DAL.DTOs.Response;
+
+namespace KASHPE.PL.MiddelWare
 {
     public class GlobalExptionHandling
     {
@@ -14,7 +16,11 @@
             
                 await _next(context);
             }
-            catch(Exception e) { }
+            catch(Exception e) {
+            
+            
+                
+            }
         }
     }
 }

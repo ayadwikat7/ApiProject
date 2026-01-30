@@ -79,6 +79,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "KASHPE.PL.Area.Admin.OrdersController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/admin/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Admin.OrdersController",
+    "Method": "UpdateOrderStatus",
+    "RelativePath": "api/admin/Orders/{orderId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "orderStatus",
+        "Type": "DAL.DTOs.Request.UpdateOrdereStatuesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KASHPE.PL.Area.Admin.ProductsContoller",
     "Method": "Create",
     "RelativePath": "api/admin/ProductsContoller",
@@ -278,6 +315,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "KASHPE.PL.Area.Users.CartsController",
+    "Method": "DelteCartItem",
+    "RelativePath": "api/Carts/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Users.CartsController",
+    "Method": "UpdateQuatity",
+    "RelativePath": "api/Carts/{productId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateQuatity",
+        "Type": "DAL.DTOs.Response.UpdateQuatityReqest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "KASHPE.PL.Area.Users.CategoriesController",
     "Method": "index",
     "RelativePath": "api/Categories",
@@ -323,6 +397,64 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Admin.ManagesController",
+    "Method": "BlockUser",
+    "RelativePath": "api/Manages/BlockUser/{userId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Admin.ManagesController",
+    "Method": "ChangeRole",
+    "RelativePath": "api/Manages/change-role",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DAL.DTOs.Request.ChangeRoleUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Admin.ManagesController",
+    "Method": "UnBlockUser",
+    "RelativePath": "api/Manages/UnBlockUser/{userId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Admin.ManagesController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Manages/Usres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -398,6 +530,27 @@
         "Name": "lan",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHPE.PL.Area.Users.ProductsController",
+    "Method": "AddReview",
+    "RelativePath": "api/Products/{productId}/reviews",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "DAL.DTOs.Request.CreateReviewRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

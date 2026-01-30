@@ -14,6 +14,9 @@ namespace DAL.Data
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public DbSet<Category> Caregories { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+
+
         public DbSet<CategorTransoulation> CategorTransoulations { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTransulation> ProductsTransoulations { get; set; }
@@ -47,6 +50,18 @@ namespace DAL.Data
                 .WithMany()
                 .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
+            builder.Entity<Review>()
+    .HasOne(r => r.User)
+    .WithMany()
+    .HasForeignKey(r => r.UserId)
+    .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Review>()
+                .HasOne(r => r.product)
+                .WithMany()
+                .HasForeignKey(r => r.ProductId)
+                .OnDelete(DeleteBehavior.NoAction);
+
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

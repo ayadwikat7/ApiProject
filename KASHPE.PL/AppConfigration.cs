@@ -30,6 +30,11 @@ namespace KASHPE.PL
             Services.AddScoped<IOrderRepository, OrderRepository>();
             Services.AddScoped<IOderItemsRepository, OrderItemsRepository>();
             Services.AddExceptionHandler<GlobaleExceptionHandler>();
+            Services.AddScoped<IOrderServise, OrderServise>();
+            Services.AddScoped<IMangeUserService, MangeUserService>();
+            Services.AddScoped<IReviewService, ReviewService>();
+            Services.AddScoped<IReviewRepository, ReviewRepository>();
+
 
             Services.AddProblemDetails();
         }

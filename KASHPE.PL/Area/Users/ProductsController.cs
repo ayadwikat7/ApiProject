@@ -1,8 +1,11 @@
 ﻿using BLL.Services;
+using DAL.DTOs.Request;
 using KASHPE.PL.Resoureses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using Stripe;
+using System.Security.Claims;
 
 namespace KASHPE.PL.Area.Users
 {
@@ -12,13 +15,17 @@ namespace KASHPE.PL.Area.Users
     {
         private readonly IProductService _ProductsSevices;
         private readonly IStringLocalizer<SharedResources> _stringLocalizer;
+        private readonly IReviewService _reviewService;
 
         public ProductsController(
             IProductService ProductsySevices,
-            IStringLocalizer<SharedResources> stringLocalizer)
+            IStringLocalizer<SharedResources> stringLocalizer,
+            IReviewService reviewService
+            )
         {
             _ProductsSevices = ProductsySevices;
             _stringLocalizer = stringLocalizer;
+            _reviewService = reviewService;
         }
 
         [HttpGet("")]
@@ -59,5 +66,18 @@ namespace KASHPE.PL.Area.Users
                 response
             });
         }
+        [HttpPost("{productId}/reviews")]
+        public async Task<IActionResult> AddReview([FromRoute] int productId, [FromBody] CreateReviewRequest request)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var response = await _reviewService.AddReviewAsync(userId,request,productId);
+
+            if (!response.Success)
+                return BadRequest(new { message = response.Message });
+
+            return Ok(new { message = response.Message });
+        }
+
     }
 }

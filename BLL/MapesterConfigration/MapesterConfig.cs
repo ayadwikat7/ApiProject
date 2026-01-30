@@ -80,7 +80,8 @@ namespace BLL.MapesterConfigration
              .Where(t => t.Language == MapContext.Current.Parameters["lan"].ToString())
              .Select(t => t.Description)
              .FirstOrDefault());
-
+            TypeAdapterConfig<Order, OrderResponse>.NewConfig()
+.Map(dest => dest.userName, source => source.User.UserName);
 
         }
 

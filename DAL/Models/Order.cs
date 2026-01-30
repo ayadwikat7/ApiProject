@@ -14,6 +14,12 @@ namespace DAL.Models
         Shipped = 4,
         Delivered = 5
     }
+    public enum PaiedStatus
+    {
+        UnPaied = 1,
+        Paid = 2,
+      
+    }
     public enum PaymentMethod
     {
         Cash = 1,
@@ -31,6 +37,7 @@ namespace DAL.Models
         public string ?SeessionId { get; set; }
         public string ?PaymentIntentId { get; set; }
         public decimal? AmountPayed { get; set; }
+        public PaiedStatus PaiedStatus { get; set; } = PaiedStatus.UnPaied;
         public DateTime? ShippedDate { get; set; }
         public string? UserId { get; set; }
         public ApplicationUsers ? User { get; set; }
