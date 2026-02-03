@@ -29,6 +29,19 @@ namespace KASHPE.PL
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            var MyAllowSpecificOrigins = "_myAllowOrigins";
+
+            // Add services to the container.
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyMethod()
+                              .AllowAnyHeader();
+                    });
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -113,6 +126,7 @@ namespace KASHPE.PL
                             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
                     };
                 });
+        
 
 
             builder.Services.AddSwaggerGen(c =>
@@ -169,7 +183,7 @@ namespace KASHPE.PL
             app.UseMiddleware<GlobalExptionHandling>();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors(MyAllowSpecificOrigins);
             app.MapControllers();
 
 
