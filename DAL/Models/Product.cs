@@ -1,8 +1,11 @@
-﻿using System;
+﻿using DAL.DTOs.Response;
+using KASHPE.PL.Validation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace DAL.Models
 {
@@ -12,6 +15,7 @@ namespace DAL.Models
         public string MainImage { get; set; }
 
         public decimal Price { get; set; }
+        [MinValue]
         public decimal Discount { get; set; }
         public int Quantity { get; set; }
         public double Rate { get; set; }
@@ -21,5 +25,7 @@ namespace DAL.Models
         public List <ProductTransulation> ProductTransulations { get; set; }
 
         public List<ProductsImage> SubImages { get; set; }
+        public List<ReviewResponse> Reviews { get; set; }
+
     }
 }

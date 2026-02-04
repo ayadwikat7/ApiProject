@@ -33,7 +33,11 @@ namespace DAL.Repository
         }
         public async Task<Product?> FindByIdAsync(int id)//session 13 part1
         {
-            return await _context.Products.Include(c => c.ProductTransulations).FirstOrDefaultAsync(c => c.Id == id);//session 13 part1
+            return await _context.Products.
+                Include(c => c.ProductTransulations).
+                Include(c => c.SubImages).Include(c => c.Reviews)
+                .ThenInclude(r => r.Name)
+                .FirstOrDefaultAsync(c => c.Id == id);//session 13 part1
         }
         public IQueryable<Product> Query()
         {

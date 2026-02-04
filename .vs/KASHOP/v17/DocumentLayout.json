@@ -3,19 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\KASHOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\validation\\minvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\validation\\minvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hp\\AppData\\Roaming\\Microsoft\\UserSecrets\\17be362f-0b73-4a34-a8de-90091bfe0a5c\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\migrations\\20260202195151_roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20260202195151_roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|c:\\users\\hp\\source\\repos\\kashop\\kashpe.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4B58CA50-5EF0-4EE4-B9A6-542EBC7E7CF9}|KASHPE.PL\\KASHPE.PL.csproj|solutionrelative:kashpe.pl\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|c:\\users\\hp\\source\\repos\\kashop\\dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8C29A28-14FE-44EA-98B9-327DFC6ACCCD}|DAL\\DAL.csproj|solutionrelative:dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,53 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs",
-              "RelativeDocumentMoniker": "KASHPE.PL\\Program.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\Program.cs",
-              "RelativeToolTip": "KASHPE.PL\\Program.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAcwLkAAAAwAAAAAAAAAA==",
+              "Title": "MinValue.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Validation\\MinValue.cs",
+              "RelativeDocumentMoniker": "DAL\\Validation\\MinValue.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Validation\\MinValue.cs",
+              "RelativeToolTip": "DAL\\Validation\\MinValue.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T19:38:27.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20260202195151_Roles.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Migrations\\20260202195151_Roles.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20260202195151_Roles.cs",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Migrations\\20260202195151_Roles.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20260202195151_Roles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T19:51:51.552Z",
+              "WhenOpened": "2026-02-04T10:17:16.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\hp\\AppData\\Roaming\\Microsoft\\UserSecrets\\17be362f-0b73-4a34-a8de-90091bfe0a5c\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\17be362f-0b73-4a34-a8de-90091bfe0a5c\\secrets.json",
-              "ToolTip": "C:\\Users\\hp\\AppData\\Roaming\\Microsoft\\UserSecrets\\17be362f-0b73-4a34-a8de-90091bfe0a5c\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\17be362f-0b73-4a34-a8de-90091bfe0a5c\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAADEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-31T05:21:27.581Z",
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\DAL\\Models\\Product.cs",
+              "RelativeToolTip": "DAL\\Models\\Product.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:10:33.828Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "KASHPE.PL\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\hp\\source\\repos\\KASHOP\\KASHPE.PL\\appsettings.Development.json",
-              "RelativeToolTip": "KASHPE.PL\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-31T05:09:14.536Z"
             }
           ]
         }

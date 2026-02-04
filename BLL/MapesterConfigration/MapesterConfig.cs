@@ -82,6 +82,8 @@ namespace BLL.MapesterConfigration
              .FirstOrDefault());
             TypeAdapterConfig<Order, OrderResponse>.NewConfig()
 .Map(dest => dest.userName, source => source.User.UserName);
+            TypeAdapterConfig<Review, ReviewResponse>.NewConfig()
+    .Map(dest => dest.Name, source => source.User.UserName);
 
         }
 
